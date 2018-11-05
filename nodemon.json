@@ -3,5 +3,5 @@
     "src"
   ],
   "ext": "ts",
-  "exec": "ts-node src"
+  "exec": "cd src && ts-node ."
 }

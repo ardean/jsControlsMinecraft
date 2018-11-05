@@ -16,7 +16,7 @@ let child;
 
 const app = express();
 app.disable("x-powered-by");
-app.use(express.static("./public"));
+app.use(express.static("../public"));
 
 const socket = app.listen(PORT, async () => {
   await start();

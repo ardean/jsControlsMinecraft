@@ -1,6 +1,6 @@
 {
   "name": "jscontrolsminecraft",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "web gui to control a minecraft server",
   "main": "dist/index.js",
   "repository": "https://github.com/ardean/jsControlsMinecraft",
