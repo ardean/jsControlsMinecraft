@@ -1,0 +1,40 @@
+html, body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.console {
+  flex: 1;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.line {
+  margin: 5px 8px;
+}
+
+.line.warning {
+  color: sandybrown;
+}
+
+.line.error {
+  color: red;
+}
+
+.command {
+  /* height: 23px; */
+  border: 1px solid rebeccapurple;
+  border-radius: 3px;
+  outline: none;
+  padding: 5px 10px;
+  font-size: 18px;
+  line-height: 28px;
+  margin: 10px;
+}
