@@ -9,8 +9,9 @@ const XMS = "2G";
 const MINECRAFT_SERVER_JAR_PATH = "server.jar";
 const SERVER_PATH = "./";
 const PORT = 5555;
+const MAX_MESSAGE_COUNT = 200;
 const allClients = [];
-const allMessages = [];
+let allMessages = [];
 let child;
 const app = express();
 app.disable("x-powered-by");
@@ -61,6 +62,9 @@ const start = () => {
 };
 const collectMessage = (message) => {
     allMessages.push(message);
+    const from = Math.max(allMessages.length - MAX_MESSAGE_COUNT, 0);
+    const to = Math.max(Math.max(allMessages.length, 0), MAX_MESSAGE_COUNT);
+    allMessages = allMessages.slice(from, to);
     sendToAll(allClients, message);
 };
 const sendAll = (client, messages) => {
